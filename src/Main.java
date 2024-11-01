@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        char symbol = '*';
-        int nTimes = 21;
 
-        Square square = new Square(symbol, nTimes, 'V');
-        square.rectanguleRepresentation(square);
+        // TODO: DO WHILE PROMPT TO CHOOSE THE SHAPE
+
+
+        // Shape.square('*', 10);
 
     }
 }
