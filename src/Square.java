@@ -1,11 +1,11 @@
-public class Rectangule {
+public class Square {
 
     private char symbol;
     private int nTimes;
     private char direction;
 
     // TODO: Learn about this keyword calling other constructor
-    public Rectangule(char symbol, int nTimes, char direction) {
+    public Square(char symbol, int nTimes, char direction) {
         setSymbol(symbol);
         setNTimes(nTimes);
         setDirection(direction);
@@ -43,11 +43,11 @@ public class Rectangule {
         return direction;
     }
 
-    public void rectanguleRepresentation(Rectangule rectangule) {
-        if (rectangule.getDirection() == 'v') {
-            verticalRectangule(rectangule.getSymbol(), rectangule.getnTimes() );
-        } else if (rectangule.getDirection() == 'h') {
-            horizontalRectangule(rectangule);
+    public void rectanguleRepresentation(Square square) {
+        if (square.getDirection() == 'v') {
+            verticalRectangule(square.getSymbol(), square.getnTimes() );
+        } else if (square.getDirection() == 'h') {
+            horizontalRectangule(square.getSymbol(), square.getnTimes());
         } else {
             System.err.println("The given direction it is not supported");
             System.exit(1);
@@ -56,14 +56,14 @@ public class Rectangule {
 
     private void verticalRectangule(char symbol, int nTimes) {
 
-        System.out.printf("%s\n", String.valueOf(symbol).repeat(nTimes));
+        System.out.printf("%s\n", String.valueOf(symbol).concat(" ").repeat(nTimes));
         for (int i = 1; i <= nTimes - 2; i++){
-            System.out.printf("%c%s%c\n", symbol," ".repeat(nTimes - 2), symbol);
+            System.out.printf("%c%s%c\n", symbol," ".repeat((nTimes * 2 )- 3), symbol);
         }
-        System.out.printf("%s", String.valueOf(symbol).repeat(nTimes));
+        System.out.printf("%s", String.valueOf(symbol).concat(" ").repeat(nTimes));
     }
 
-    private void horizontalRectangule(Rectangule rectangule) {
+    private void horizontalRectangule(char symbol, int nTimes) {
 
     }
 
